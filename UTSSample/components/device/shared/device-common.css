@@ -1,0 +1,54 @@
+@import "../../common/styles/uni-common.css";
+
+/* === 保留 Device 特有样式 === */
+
+/* 设备连接包装器样式 */
+.device-connection-wrapper {
+    width: 100%;
+    position: relative;
+}
+
+/* 设备连接部分样式 */
+.device-connection {
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-xxl);
+    background-color: var(--color-bg-primary);
+    border-radius: var(--radius-xxxl);
+    box-shadow: 0 2rpx 12rpx var(--color-shadow);
+}
+
+/* 断开连接按钮样式 */
+.btn-disconnect {
+    background-color: var(--color-text-light);
+    box-shadow: 0 4rpx 12rpx var(--color-gray-shadow);
+}
+
+.btn-disconnect:active {
+    background-color: var(--color-gray-dark);
+    box-shadow: 0 2rpx 6rpx var(--color-gray-shadow-light);
+}
+
+.wifi-config-container {
+    height: 50%;
+}
+
+.device-info-section {
+    padding: var(--spacing-xxxl) var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.password-title {
+    margin-top: var(--spacing-xxxl);
+}
+
+.setting-input {
+    text-align: center;
+    min-height: 80rpx;
+    border-radius: 8rpx;
+    background-color: #fff;
+    border: 1px solid #c8c7cc;
+    font-size: 28rpx;
+    color: #333;
+}

@@ -1,0 +1,63 @@
+@import "../common/styles/uni-common.css";
+
+/* 打印设置部分 - 复用 uni-card */
+.print-settings {
+  /* 继承 uni-card 样式，只需指定 margin */
+  padding: var(--spacing-xxl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xxxl);
+  box-shadow: 0 2rpx 12rpx var(--color-shadow);
+  margin-top: var(--spacing-xxl);
+}
+
+/* 建议 HTML 中直接使用 class="print-settings uni-card" 
+   如果不能修改 HTML，则使用 mixin 或如上保留重复属性以确保兼容，
+   或者使用 @extend (如果支持 SCSS)。CSS 中还是保留属性比较稳妥。
+*/
+
+/* 复用标准输入框样式 */
+.print-settings .setting-input {
+  /* 这里完全等同于 .uni-input-std，可以删除内容留空，或者在 HTML 用 .uni-input-std */
+  min-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  border: 1px solid #c8c7cc;
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 布局特有样式 */
+.setting-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-lg);
+  gap: var(--spacing-md);
+}
+
+.setting-label {
+  flex: 1;
+}
+
+/* 另一种风格的输入框 (灰色背景) - 保持特定 */
+.setting-input,
+.picker-value {
+  width: 100%;
+  min-height: var(--spacing-xxxl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-text-tertiary);
+  border-radius: var(--radius-xxl);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.setting-input {
+  text-align: center;
+}
+
+picker {
+  width: 100%;
+}

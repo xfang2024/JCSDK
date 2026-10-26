@@ -1,0 +1,411 @@
+@import "../../common/styles/uni-common.css";
+
+/* === 保留 Print 特有样式 === */
+
+/* 打印进度/状态容器 */
+.print-copies-container {
+  height: 32%;
+}
+
+.print-progress-container {
+  height: 40%;
+}
+
+.print-progress-container.progress-state {
+  height: 40%;
+}
+
+.print-progress-container.result-state {
+  height: 30%;
+}
+
+.print-progress-container.error-state {
+  height: 35%;
+}
+
+.wifi-config-container {
+  height: 50%;
+}
+
+/* Print 特有的输入框定义 (如果需要覆盖通用样式或有特定上下文) */
+.wifi-config-container .setting-input,
+.print-copies-container .setting-input {
+  min-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  border: 1px solid #c8c7cc;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.print-settings .setting-input {
+  min-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  border: 1px solid #c8c7cc;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.device-info-section {
+  padding: var(--spacing-xxxl) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.uni-dialog-confirm {
+  background-color: var(--color-primary);
+  color: var(--color-bg-primary);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  font-family: var(--font-family-base);
+  flex: 1;
+  text-align: center;
+  border-radius: var(--radius-sm);
+  margin-left: var(--spacing-lg);
+  padding: var(--spacing-sm) 0;
+}
+
+/**待移出**/
+.print-functions {
+  margin-top: var(--spacing-xxl);
+  padding: var(--spacing-xxl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-xxxl);
+  box-shadow: 0 2rpx 12rpx var(--color-shadow);
+}
+
+.btn:disabled {
+  background-color: var(--color-text-light);
+  box-shadow: none;
+  transform: none;
+}
+
+
+
+
+
+.text-style {
+  margin-top: var(--spacing-lg);
+  font-size: var(--font-size-md);
+}
+
+.margin-top {
+  margin-top: var(--spacing-lg);
+}
+
+.print-settings-button {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-xxl);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-lg);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.makewifiBg {
+  height: 60%;
+  width: 80%;
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-xxxl);
+  padding: var(--spacing-xxxxl);
+  margin: 0 var(--spacing-lg);
+}
+
+.password-title {
+  margin-top: var(--spacing-xxxl);
+}
+
+/* 打印预览相关样式 (全部保留) */
+.print-preview-container {
+  height: 68%;
+  max-height: 85vh;
+  min-height: 50vh;
+}
+
+.print-preview-container.single-page {
+  height: 60%;
+  max-height: 65vh;
+  min-height: 45vh;
+}
+
+.print-preview-container.multi-page {
+  height: 68%;
+  max-height: 85vh;
+  min-height: 50vh;
+}
+
+.preview-image-container {
+  width: 100%;
+  padding: var(--spacing-xxl);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 280rpx;
+  background-color: var(--color-bg-tertiary);
+  border-radius: var(--radius-sm);
+  border: 1rpx solid var(--color-border-light);
+}
+
+.divider {
+  height: 1rpx;
+  background-color: var(--color-border-light);
+  margin: var(--spacing-lg) 0;
+}
+
+.print-preview-container .setting-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--spacing-md) var(--spacing-xxl);
+  margin: var(--spacing-sm) 0;
+  border-radius: var(--radius-sm);
+}
+
+.preview-page-controls {
+  padding: var(--spacing-lg) var(--spacing-xxl);
+  border-bottom: 1rpx solid var(--color-border-light);
+}
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.nav-button {
+  width: var(--spacing-xxxl);
+  height: var(--spacing-xxxl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.nav-button:active {
+  background-color: var(--color-primary-dark);
+  transform: scale(0.95);
+}
+
+.nav-button.disabled {
+  background-color: var(--color-text-light);
+  color: var(--color-text-tertiary);
+  cursor: not-allowed;
+}
+
+.nav-button.disabled:active {
+  background-color: var(--color-text-light);
+  transform: none;
+}
+
+.page-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.page-input {
+  width: var(--spacing-xxxxl);
+  height: var(--spacing-xxl);
+  text-align: center;
+  border: 1rpx solid var(--color-border-light);
+  border-radius: var(--radius-xs);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-bg-primary);
+}
+
+.page-total {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.label-info {
+  padding: 0 var(--spacing-xxl) var(--spacing-lg);
+  text-align: center;
+}
+
+.label-info-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.print-preview-container .setting-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xxl);
+  padding: 0 var(--spacing-xxl);
+}
+
+.print-preview-container .setting-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+.print-preview-container .setting-input {
+  flex: 1;
+  min-height: 80rpx;
+  padding: 0 15rpx;
+  background-color: #fff;
+  border: 1px solid #c8c7cc;
+  border-radius: 8rpx;
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+}
+
+.progress-container {
+  width: 85%;
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-lg) 0;
+}
+
+.progress-text {
+  display: block;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+
+.progress-bar {
+  width: 100%;
+  height: var(--spacing-sm);
+  background-color: var(--color-border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width var(--transition-base);
+}
+
+.status-container {
+  width: 85%;
+  margin: var(--spacing-xxl) auto;
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+}
+
+.status-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-base);
+}
+
+.status-text.error-text {
+  color: var(--color-error);
+}
+
+.status-text.success-text {
+  color: var(--color-success);
+}
+
+.setting-input {
+  text-align: center;
+}
+
+.print-copies-container .setting-input {
+  min-height: 80rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  border: 1px solid #c8c7cc;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.print-type-selection {
+  margin-bottom: var(--spacing-lg);
+}
+
+.print-type-selection {
+  margin-bottom: var(--spacing-lg);
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  border: 2rpx solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-bg-primary);
+  transition: var(--transition-base);
+}
+
+.card-radio-selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+}
+
+.radio-icon {
+  font-size: var(--font-size-xxl);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.radio-label {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+}
+
+.print-management {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--color-border-lightest);
+}
+
+.subsection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.subsection-title {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+  color: var(--color-text-primary);
+  padding-left: var(--spacing-sm);
+  border-left: 4px solid var(--color-primary);
+}
+
+.btn-preview {
+  background-color: var(--color-purple);
+  box-shadow: 0 4rpx 12rpx var(--color-purple-shadow);
+}
+
+.btn-preview:active {
+  background-color: var(--color-purple-dark);
+  box-shadow: 0 2rpx 6rpx var(--color-purple-shadow-light);
+}

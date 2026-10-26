@@ -1,0 +1,124 @@
+/* ==================== CSS变量定义 ==================== */
+:root {
+	/* 颜色变量 */
+	--color-primary: #007AFF;
+	--color-primary-dark: #0056CC;
+	--color-primary-darker: #002244;
+	--color-primary-light: #e6f7ff;
+	--color-success: #07c160;
+	--color-success-light: #19be6b;
+	--color-error: #e64340;
+	--color-error-light: #ff3b30;
+	--color-warning: #f0ad4e;
+	--color-text-primary: #333;
+	--color-text-secondary: #666;
+	--color-text-tertiary: #999;
+	--color-text-light: #CCCCCC;
+	--color-bg-primary: #fff;
+	--color-bg-secondary: #f8f9fa;
+	--color-bg-tertiary: #f5f5f5;
+	--color-bg-page: #e5e7eb;
+	--color-border: #CCCCCC;
+	--color-border-light: #e0e0e0;
+	--color-border-lighter: #c8c7cc;
+	--color-border-lightest: #f0f0f0;
+	--color-shadow: rgba(0, 0, 0, 0.05);
+	--color-shadow-light: rgba(0, 0, 0, 0.1);
+	--color-overlay: rgba(0, 0, 0, 0.6);
+	--color-primary-shadow: rgba(0, 122, 255, 0.3);
+	--color-primary-shadow-light: rgba(0, 122, 255, 0.2);
+	--color-gray-shadow: rgba(204, 204, 204, 0.3);
+	--color-gray-shadow-light: rgba(204, 204, 204, 0.2);
+	--color-gray-dark: #A8A8A8;
+	--color-purple: #9E8FB2;
+	--color-purple-dark: #7E708F;
+	--color-purple-shadow: rgba(158, 143, 178, 0.3);
+	--color-purple-shadow-light: rgba(158, 143, 178, 0.2);
+	
+	/* 尺寸变量 */
+	--spacing-xs: 5rpx;
+	--spacing-sm: 10rpx;
+	--spacing-md: 15rpx;
+	--spacing-lg: 20rpx;
+	--spacing-xl: 24rpx;
+	--spacing-xxl: 30rpx;
+	--spacing-xxxl: 40rpx;
+	--spacing-xxxxl: 50rpx;
+	
+	/* 圆角变量 */
+	--radius-sm: 6rpx;
+	--radius-md: 8rpx;
+	--radius-lg: 10rpx;
+	--radius-xl: 12rpx;
+	--radius-xxl: 16rpx;
+	--radius-xxxl: 20rpx;
+	--radius-xs: 4rpx;
+	
+	/* 字体变量 */
+	--font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+	--font-size-xs: 24rpx;
+	--font-size-sm: 28rpx;
+	--font-size-md: 30rpx;
+	--font-size-lg: 32rpx;
+	--font-size-xl: 36rpx;
+	--font-size-xxl: 40rpx;
+	
+	/* 其他变量 */
+	--line-height-base: 1.5;
+	--transition-base: all 0.3s ease;
+	--transition-fast: all 0.2s ease;
+}
+
+/* ==================== 基础样式 ==================== */
+.page-wrapper {
+	margin: 0 auto;
+	width: 100%;
+	padding: var(--spacing-lg);
+	box-sizing: border-box;
+	background-color: var(--color-bg-page);
+}
+
+
+/* 弹窗打开时禁止页面滚动 - 默认dialog状态 */
+.page-wrapper.no-scroll {
+	/* 移除overflow: hidden和height: 100vh，避免页面滚动到顶部 */
+	width: 100%;
+}
+
+
+
+/* 全局遮罩层样式，用于阻止loading状态下的背景滚动 */
+.global-loading-mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	/* 设置一个足够高的z-index，确保遮罩层在最上层 */
+	z-index: 9998;
+	/* 透明背景，不影响视觉效果 */
+	background-color: transparent;
+	/* 确保遮罩层能捕获所有事件 */
+	pointer-events: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
